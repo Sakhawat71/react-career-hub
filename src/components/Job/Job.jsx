@@ -28,7 +28,7 @@ const Job = ({ job }) => {
                 </div>
 
                 <div className="card-actions">
-                    <Link to={`/job/:${id}`}>
+                    <Link to={`/job/${id}`}>
                         <button className="btn btn-primary normal-case bg-[#7E90FE] text-white hover:bg-[#9873FF] border-none font-extrabold  text-base">View Details</button>
                     </Link>
                 </div>
