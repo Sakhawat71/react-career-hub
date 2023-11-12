@@ -2,8 +2,9 @@ import PropTypes from 'prop-types';
 
 const Job = ({job}) => {
     return (
-        <div>
-            <h3>{job.id}</h3>
+        <div className='border'>
+            <h3>{job.job_title}</h3>
+            <p>{job.company_name}</p>
         </div>
     );
 };
