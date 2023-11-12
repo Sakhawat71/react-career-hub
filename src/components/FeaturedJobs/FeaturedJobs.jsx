@@ -4,14 +4,14 @@ import Job from "../Job/Job";
 
 const FeaturedJobs = () => {
 
-    const [jobs,setJobs] = useState([])
+    const [jobs, setJobs] = useState([])
     const [dataLength, setDataLength] = useState(4)
 
-    useEffect(()=>{
+    useEffect(() => {
         fetch('jobs.json')
-        .then(res => res.json())
-        .then(data => setJobs(data))
-    },[])
+            .then(res => res.json())
+            .then(data => setJobs(data))
+    }, [])
 
     return (
         <div className="my-10">
@@ -23,6 +23,11 @@ const FeaturedJobs = () => {
                 {
                     jobs.slice(0, dataLength).map(job => <Job key={job.id} job={job}></Job>)
                 }
+            </div>
+            <div className="text-center my-3">
+                <div className={dataLength === jobs.length ? 'hidden' : ''}>
+                    <button onClick={() => setDataLength(jobs.length)} className="btn btn-primary normal-case bg-gradient-to-r from-sky-500 to-indigo-500 border-none text-white font-extrabold text-base">See All Jobs</button>
+                </div>
             </div>
         </div>
     );
