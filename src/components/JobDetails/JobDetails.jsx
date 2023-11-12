@@ -1,5 +1,5 @@
 import { BiDollarCircle } from "react-icons/bi";
-import { IoCalendarOutline,IoCallOutline,IoMailOutline,IoLocationOutline } from "react-icons/io5";
+import { IoCalendarOutline, IoCallOutline, IoMailOutline, IoLocationOutline } from "react-icons/io5";
 
 import { useLoaderData, useParams } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
@@ -12,7 +12,7 @@ const JobDetails = () => {
     const job = jobs.find(job => job.id === +id)
     console.log(job)
     const { job_description, job_responsibility, educational_requirements, experiences, contact_information, salary, job_title } = job;
-    const {address,email,phone} = contact_information;
+    const { address, email, phone } = contact_information;
 
     const hadelApplyJob = () => {
         toast("Job Apply Done");
@@ -37,33 +37,35 @@ const JobDetails = () => {
                     <hr />
                     <p className="flex items-center space-x-1">
                         <BiDollarCircle className="text-xl"></BiDollarCircle>
-                        <span className="font-bold text-xl">Salary: </span>
+                        <span className="font-bold text-xl pr-3">Salary: </span>
                         {salary}
                     </p>
                     <p className="flex items-center space-x-1">
                         <IoCalendarOutline className="text-xl"></IoCalendarOutline>
-                        <span className="font-bold text-xl">Job Title: </span>
+                        <span className="font-bold text-xl pr-3">Job Title: </span>
                         {job_title}
                     </p>
                     <h2 className="font-extrabold text-xl ">Contact Information</h2>
                     <hr className="my-5" />
                     <p className="flex items-center space-x-1">
                         <IoCallOutline className="text-xl"></IoCallOutline>
-                        <span className="font-bold text-xl">Phone: </span>
+                        <span className="font-bold text-xl pr-3">Phone: </span>
                         {phone}
                     </p>
                     <p className="flex items-center space-x-1">
                         <IoMailOutline className="text-xl"></IoMailOutline>
-                        <span className="font-bold text-xl">Email: </span>
+                        <span className="font-bold text-xl pr-3">Email: </span>
                         {email}
                     </p>
                     <p className="flex items-center space-x-1">
                         <IoLocationOutline className="text-3xl"></IoLocationOutline>
-                        <span className="font-bold text-xl">Address: </span>
+                        <span className="font-bold text-xl pr-2">Address: </span>
                         <span className="text-[#757575]">{address}</span>
                     </p>
-                    <button onClick={hadelApplyJob} className="btn btn-primary">Apply Now</button>
-                    <ToastContainer />
+                    <div className="pt-5">
+                        <button onClick={hadelApplyJob} className="btn btn-primary w-full">Apply Now</button>
+                        <ToastContainer />
+                    </div>
                 </div>
             </div>
         </div>
