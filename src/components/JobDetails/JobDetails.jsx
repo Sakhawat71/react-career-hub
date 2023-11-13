@@ -11,7 +11,7 @@ const JobDetails = () => {
     const jobs = useLoaderData();
     const { id } = useParams();
     const job = jobs.find(job => job.id === +id)
-    console.log(job)
+    // console.log(job)
     const { job_description, job_responsibility, educational_requirements, experiences, contact_information, salary, job_title } = job;
     const { address, email, phone } = contact_information;
 

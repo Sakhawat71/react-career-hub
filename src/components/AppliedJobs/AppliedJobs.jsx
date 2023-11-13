@@ -29,7 +29,7 @@ const AppliedJobs = () => {
 
         if (stordJobIds.length > 0) {
             const jobsApplied = jobs.filter(job => stordJobIds.includes(job.id));
-            console.log(jobs, stordJobIds, jobsApplied)
+            // console.log(jobs, stordJobIds, jobsApplied)
             setAppliedJob(jobsApplied);
             setDisplayJob(jobsApplied);
         }

@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 
 const JobApplied = ({job}) => {
-    console.log(job)
+    // console.log(job)
     const {company_name,logo,job_title,salary,remote_or_onsite} = job;
     return (
         <div className='border rounded-lg p-7 flex gap-7'>
