@@ -16,7 +16,7 @@ const JobDetails = () => {
     const { address, email, phone } = contact_information;
 
     const hadelApplyJob = () => {
-        saveJobApplication(id)
+        saveJobApplication(+id)
         toast("Job Apply Done");
     }
 
