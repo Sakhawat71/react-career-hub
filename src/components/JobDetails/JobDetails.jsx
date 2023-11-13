@@ -4,6 +4,7 @@ import { IoCalendarOutline, IoCallOutline, IoMailOutline, IoLocationOutline } fr
 import { useLoaderData, useParams } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
+import { saveJobApplication } from "../../utitlity/localStorage";
 
 const JobDetails = () => {
 
@@ -15,6 +16,7 @@ const JobDetails = () => {
     const { address, email, phone } = contact_information;
 
     const hadelApplyJob = () => {
+        saveJobApplication(id)
         toast("Job Apply Done");
     }
 
