@@ -25,7 +25,7 @@ const JobDetails = () => {
         <div>
             <Helmet>
                 <title>
-                    CareerHub | Job-Details
+                    CareerHub | {job_title}
                 </title>
             </Helmet>
             <h1 className="text-center font-extrabold text-3xl mt-12 mb-36">Job Details</h1>
