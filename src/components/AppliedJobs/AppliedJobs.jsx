@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import { getStordJobApplication } from "../../utitlity/localStorage";
 import JobApplied from "../JobApplied/JobApplied";
+import { Helmet } from "react-helmet-async";
 
 const AppliedJobs = () => {
 
@@ -37,6 +38,11 @@ const AppliedJobs = () => {
 
     return (
         <div className=" space-y-3 my-20">
+            <Helmet>
+                <title>
+                    CareerHub | Applied-Jobs
+                </title>
+            </Helmet>
             <details className="dropdown">
                 <summary className="m-1 btn normal-case">Filter By</summary>
                 <ul className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
